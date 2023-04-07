@@ -1,0 +1,10 @@
+[Unit]
+Description=JetServer_1
+After=network.target
+
+[Service]
+User=deeman
+ExecStart=/home/deeman/jet/jetserver.sh
+
+[Install]
+WantedBy=multi-user.target
