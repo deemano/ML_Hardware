@@ -1,0 +1,14 @@
+[Unit]
+Description=Jetserver Flask App
+After=network.target
+
+[Service]
+User=deeman
+WorkingDirectory=/home/deeman/jet
+Environment="FLASK_APP=jet.py"
+ExecStart=/usr/bin/python3 /home/deeman/jet/jet.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
